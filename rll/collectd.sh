@@ -56,6 +56,7 @@ function configure_collectd_plugin() {
   local collectd_plugin=$1
   # Remove $1 from $@
   shift
+  echo "Hello Utpal"
   local collectd_plugin_conf="$collectd_conf_plugins_dir/${collectd_plugin}.conf"
   # Create a temporary file for the collectd plugin configration
   local collectd_plugin_conf_tmp=`mktemp "${collectd_plugin_conf}.XXXXXXXXXX"`
