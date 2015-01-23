@@ -260,6 +260,7 @@ configure_collectd_plugin network \
 
 # Make sure the collectd service is enabled
 if [ -d /etc/yum.repos.d ]; then
+  chkconfig --add $collectd_service
   chkconfig $collectd_service on
 fi
 
