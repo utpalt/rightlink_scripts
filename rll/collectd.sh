@@ -126,7 +126,7 @@ if [ -d /etc/apt ]; then
   apt-get install -y curl collectd-core=4\*
 elif [ -d /etc/yum.repos.d ]; then
   # keep these lines separate, yum doesn't fail for missing packages when grouped together
-  yum install -y "collectd-4*"
+  yum install -y --skip-broken  "collectd-4*"
   yum install -y curl
 fi
 
